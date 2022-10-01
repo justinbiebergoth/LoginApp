@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
         let userName = String(userNameTF.text ?? "")
         let password = String(passwordTF.text ?? "")
         
-        if userName != "Sonya", password != "qwerty" {
+        if userName != "Sonya" || password != "qwerty" {
             showAlert(with: "❌", and: "User Name or Password is wrong")
         }
 
