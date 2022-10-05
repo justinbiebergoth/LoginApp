@@ -11,19 +11,15 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeNameLabel: UILabel!
      
-    var welcomeName: String!
+    var user = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewBackground()
-        welcomeNameLabel.text = "Welcome, \(welcomeName ?? "User")"
+        welcomeNameLabel.text = "Welcome, \(user)!"
         
     }
     
-    @IBAction func logoutButtonDidTapped(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-
     private func setupViewBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
